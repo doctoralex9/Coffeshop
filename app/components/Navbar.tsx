@@ -25,17 +25,17 @@ export default function Nav() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
-            Features
+            Menu
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link aria-current="page" href="#">
-            Customers
+           About the place
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Integrations
+             About Us
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -45,7 +45,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+            Contact
           </Button>
         </NavbarItem>
       </NavbarContent>
