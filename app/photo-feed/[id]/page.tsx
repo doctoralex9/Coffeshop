@@ -1,5 +1,5 @@
 import Image from "next/image";
-import wondersImages, { WonderImage } from "../wonders";
+import wondersImages, { WonderImage } from "../photos";
 
 export default async function PhotoPage({
   params,
