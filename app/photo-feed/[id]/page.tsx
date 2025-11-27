@@ -19,11 +19,6 @@ export default async function PhotoPage({
           src={photo.src}
           className="w-full object-cover aspect-square "
         />
-
-        <div className="bg-white py-4">
-          <h3>{photo.photographer}</h3>
-          <h3>{photo.location}</h3>
-        </div>
       </div>
     </div>
   );

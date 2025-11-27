@@ -23,7 +23,7 @@ export default function CafeHero() {
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.5}s`,
+              animationDelay: `${i * 4}s`,
               animationDuration: `${3 + i}s`
             }}
           />
@@ -36,7 +36,7 @@ export default function CafeHero() {
         <div className="lg:w-1/2 z-10 space-y-8 text-center lg:text-left">
           <div className="inline-block">
             <span className="px-4 py-2 bg-amber-900 text-amber-50 rounded-full text-sm font-medium tracking-wide">
-              ☕ ARTISAN COFFEE & PASTRIES
+              ☕ Coffe Spot
             </span>
           </div>
           

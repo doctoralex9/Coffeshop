@@ -11,59 +11,50 @@ export type WonderImage = {
   id: string;
   name: string;
   src: StaticImageData;
-  photographer: string;
-  location: string;
 };
 
 const wondersImages: WonderImage[] = [
   {
     id: "1",
-    name: "Great Wall of China",
+    name: "Classic Capuccino",
     src: photo1,
-    photographer: "Photo by Max van den Oetelaar on Unsplash",
-    location: "China",
+ 
   },
+
   {
     id: "2",
-    name: "Petra",
+    name: "Traditional Greek",
     src: photo2,
-    photographer: "Photo by Reiseuhu on Unsplash",
-    location: "Jordan",
   },
+
   {
     id: "3",
-    name: "Christ the Redeemer",
+    name: "Some of our breakfast",
     src: photo3,
-    photographer: "Photo by Andrea Leopardi on Unsplash",
-    location: "Brazil",
   },
+
   {
     id: "4",
-    name: "Machu Picchu",
+    name: "Hot Coffes",
     src: photo4,
-    photographer: "Photo by Jared Schwitzke on Unsplash",
-    location: "Peru",
   },
+
   {
     id: "5",
-    name: "Chichen Itza",
+    name: "Cold Coffes",
     src: photo5,
-    photographer: "Photo by E Mens on Unsplash",
-    location: "Mexico",
   },
+
   {
     id: "6",
-    name: "Roman Colosseum",
+    name: "Latte",
     src: photo6,
-    photographer: "Photo by Andrea Cipriano on Unsplash",
-    location: "Italy",
   },
+
   {
     id: "7",
-    name: "Taj Mahal",
+    name: "Americano",
     src: photo7,
-    photographer: "Photo by Su San Lee on Unsplash",
-    location: "India",
   },
 ];
 

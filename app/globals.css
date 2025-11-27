@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+Nav {
+  background-color: saddlebrown;
+  font-style:italic ;
+
+}
+
 /* Café Theme Colors */
 :root {
   --background: #0b0a09;      
