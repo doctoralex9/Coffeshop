@@ -47,3 +47,13 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} 
+
+.container {
+  display: flex;
+  justify-content: center;
+}

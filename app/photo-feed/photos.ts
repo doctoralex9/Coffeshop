@@ -53,7 +53,7 @@ const wondersImages: WonderImage[] = [
 
   {
     id: "7",
-    name: "Americano",
+    name: "Mocha",
     src: photo7,
   },
 ];
