@@ -1,106 +1,130 @@
+"use client";
+
 import Image from "next/image";
 import wondersImages from "../photo-feed/photos";
-import { Card } from "./card";
+import "./styles.css";
+import { Coffee, Snowflake } from 'lucide-react';
 
 export default function MenuPreview() {
-  const heroItems = [wondersImages[3], wondersImages[4]];
   return (
-    
-      <section 
-      className="section text-center" 
-      style={{ backgroundColor: '#f5e6d3' }}
-    >
-      <h1 className="text-3xl font-semibold mb-8" style={{ color: '#8B4513' }}>
-        Coffees & more
-      </h1>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {/* Hot Coffee Card */}
-        <div 
-          className="p-4 rounded-lg shadow-lg hover:scale-[1.02] transition max-w-sm mx-auto"
-          style={{ 
-        backgroundColor: 'white',
-        border: '2px solid #d4a574'
-          }}
-        >
-          <Image
-        src={wondersImages[3].src}
-        alt={wondersImages[3].name}
-        className="rounded-md mb-4 object-cover"
-        placeholder="blur"
-          />
-          <h2 className="text-xl font-semibold mb-2" style={{ color: '#ff6600' }}>
-        Hot Coffee
-          </h2>
-          <p style={{ color: '#8B4513' }}>
-        Explore our selection of freshly brewed hot coffees
-          </p>
+      <section className="menu-preview-section">
+      {/* Section Header */}
+      <div className="menu-header animate-fade-in-down">
+        <span className="menu-subtitle">Discover Our Collection</span>
+        <h1 className="menu-preview-heading">
+          Handcrafted Beverages
+        </h1>
+        <p className="menu-description">
+          From classic espresso to innovative cold brews, each drink is crafted with passion and precision
+        </p>
       </div>
 
-        {/* Cold Coffee Card */}
-        <div 
-          className="p-4 rounded-lg shadow-lg hover:scale-[1.02] transition max-w-sm mx-auto"
-          style={{ 
-        backgroundColor: 'white',
-        border: '2px solid #d4a574'
-          }}
-        >
-          <Image
-        src={wondersImages[4].src}
-        alt={wondersImages[4].name}
-        className="rounded-md mb-4 object-cover"
-        placeholder="blur"
-          />
-          <h3 className="text-xl font-semibold mb-2" style={{ color: '#ff6600' }}>
-        Cold Coffees and refreshments!
-          </h3>
-          <p style={{ color: '#8B4513' }}>
-        Refresh yourself with our cold coffee specialties
-          </p>
+      {/* Featured Categories - Hero Cards */}
+      <div className="menu-category-hero">
+        {/* Hot Coffee Featured Card */}
+        <div className="menu-hero-card animate-slide-in-left">
+          <div className="menu-hero-image-wrapper">
+            <Image
+              src={wondersImages[3].src}
+              alt={wondersImages[3].name}
+              className="menu-hero-image"
+              placeholder="blur"
+            />
+            <div className="menu-hero-overlay">
+              <div className="menu-hero-badge">
+                <Coffee className="w-5 h-5" />
+                <span>Hot Beverages</span>
+              </div>
+            </div>
+          </div>
+          <div className="menu-hero-content">
+            <h2 className="menu-hero-title">Hot Coffee Collection</h2>
+            <p className="menu-hero-description">
+              Explore our selection of freshly brewed hot coffees, from bold espressos to smooth lattes
+            </p>
+            <button className="menu-cta-btn">
+              View Menu
+              <span className="menu-cta-arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Cold Coffee Featured Card */}
+        <div className="menu-hero-card animate-slide-in-right">
+          <div className="menu-hero-image-wrapper">
+            <Image
+              src={wondersImages[4].src}
+              alt={wondersImages[4].name}
+              className="menu-hero-image"
+              placeholder="blur"
+            />
+            <div className="menu-hero-overlay">
+              <div className="menu-hero-badge">
+                <Snowflake className="w-5 h-5" />
+                <span>Cold Beverages</span>
+              </div>
+            </div>
+          </div>
+          <div className="menu-hero-content">
+            <h2 className="menu-hero-title">Cold Brew & Refreshments</h2>
+            <p className="menu-hero-description">
+              Refresh yourself with our signature cold brews and iced specialties
+            </p>
+            <button className="menu-cta-btn">
+              View Menu
+              <span className="menu-cta-arrow">→</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Additional Coffee Options */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-        <div 
-          className="p-4 rounded-lg shadow-lg hover:scale-[1.02] transition max-w-sm mx-auto"
-          style={{ 
-        backgroundColor: 'white',
-        border: '2px solid #d4a574'
-          }}
-        >
-          <Image
-        src={wondersImages[0].src}
-        alt={wondersImages[0].name}
-        className="rounded-md mb-3 object-cover"
-        placeholder="blur"
-          />
-          <h4 className="text-lg font-semibold" style={{ color: '#ff6600' }}>
-        {wondersImages[0].name}
-          </h4>
-          <p style={{ color: '#8B4513' }}>Enjoy the timeless taste of our rich, foamy cappuccino</p>
-        </div>
+      {/* Signature Drinks Grid */}
+      <div className="menu-signature-section">
+        <h3 className="menu-section-title animate-fade-in-up">Signature Creations</h3>
 
-        <div 
-          className="p-4 rounded-lg shadow-lg hover:scale-[1.02] transition max-w-sm mx-auto"
-          style={{ 
-        backgroundColor: 'white',
-        border: '2px solid #d4a574'
-          }}
-        >
-          <Image
-        src={wondersImages[5].src}
-        alt={wondersImages[5].name}
-        className="rounded-md mb-3 object-cover"
-        placeholder="blur"
-          />
-          <h4 className="text-lg font-semibold" style={{ color: '#ff6600' }}>
-        {wondersImages[5].name}
-          </h4>
-          <p style={{ color: '#8B4513' }}>Savor the smooth harmony of espresso blended with creamy steamed milk</p>
+        <div className="menu-options-grid">
+          <div className="menu-signature-card animate-fade-in-up stagger-1">
+            <div className="menu-signature-image-wrapper">
+              <Image
+                src={wondersImages[0].src}
+                alt={wondersImages[0].name}
+                className="menu-signature-image"
+                placeholder="blur"
+              />
+              <div className="menu-signature-overlay">
+                <span className="menu-signature-tag">Popular</span>
+              </div>
+            </div>
+            <div className="menu-signature-content">
+              <h4 className="menu-signature-title">{wondersImages[0].name}</h4>
+              <p className="menu-signature-description">
+                Enjoy the timeless taste of our rich, foamy cappuccino with perfectly steamed milk
+              </p>
+            </div>
+          </div>
+
+          <div className="menu-signature-card animate-fade-in-up stagger-2">
+            <div className="menu-signature-image-wrapper">
+              <Image
+                src={wondersImages[5].src}
+                alt={wondersImages[5].name}
+                className="menu-signature-image"
+                placeholder="blur"
+              />
+              <div className="menu-signature-overlay">
+                <span className="menu-signature-tag">Chef's Pick</span>
+              </div>
+            </div>
+            <div className="menu-signature-content">
+              <h4 className="menu-signature-title">{wondersImages[5].name}</h4>
+              <p className="menu-signature-description">
+                Savor the smooth harmony of espresso blended with creamy steamed milk
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       </section>
-     
+
   );
 }

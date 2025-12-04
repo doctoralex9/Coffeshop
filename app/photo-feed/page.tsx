@@ -8,14 +8,16 @@ export default function Home() {
       <h1 className="text-center text-3xl font-bold my-4">
         Menu
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:flex lg:flex-row lg:flex-nowrap lg:overflow-x-auto lg:gap-4">
         {wonders.map(({ id, src, name }) => (
-          <Link key={id} href={`/photo-feed/${id}`}>
-            <Image
-              alt={name}
-              src={src}
-              className="w-full object-cover aspect-square"
-            />
+          <Link key={id} href={`/photo-feed/${id}`} className="shrink-0 w-48 md:w-56 lg:w-64">
+            <div className="w-full">
+              <Image
+                alt={name}
+                src={src}
+                className="w-full object-cover aspect-square"
+              />
+            </div>
           </Link>
         ))}
       </div>

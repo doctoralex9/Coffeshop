@@ -13,7 +13,7 @@ export default function CafeHero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-linear-to-br from-amber-50 via-orange-50 to-amber-100">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 animate-fade-in">
       {/* Floating coffee beans decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(6)].map((_, i) => (
@@ -40,9 +40,9 @@ export default function CafeHero() {
             </span>
           </div>
           
-          <h1 className="text-6xl lg:text-7xl font-bold text-amber-950 leading-tight">
+          <h1 className="text-6xl lg:text-7xl font-bold text-amber-950 leading-tight animate-slide-in-left">
             Where Every
-            <span className="block text-transparent bg-clip-text bg-linear-to-r from-amber-600 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 animate-text-shimmer">
               Sip Tells
             </span>
             a Story
@@ -53,12 +53,12 @@ export default function CafeHero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="group px-8 py-4 bg-amber-900 text-white rounded-full font-semibold text-lg hover:bg-amber-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up">
+            <button className="group px-8 py-4 bg-amber-900 text-white rounded-full font-semibold text-lg hover:bg-amber-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-bounce-subtle">
               View Menu
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </button>
-            <button className="px-8 py-4 bg-white text-amber-900 rounded-full font-semibold text-lg hover:bg-amber-50 transition-all duration-300 border-2 border-amber-900">
+            <button className="px-8 py-4 bg-white text-amber-900 rounded-full font-semibold text-lg hover:bg-amber-50 transition-all duration-300 border-2 border-amber-900 hover:scale-105">
               Visit Us
             </button>
           </div>
@@ -96,13 +96,13 @@ export default function CafeHero() {
             style={{ transform: `translateY(${scrollY * 0.1}px)` }}
           >
             {/* Main coffee cup image placeholder with gradient */}
-            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-linear-to-br from-amber-600 via-orange-500 to-amber-700 flex items-center justify-center">
-                <Coffee className="w-48 h-48 text-white opacity-20" />
+            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl animate-scale-in">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-500 to-amber-700 flex items-center justify-center">
+                <Coffee className="w-48 h-48 text-white opacity-20 animate-rotate-slow" />
               </div>
-              
+
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               
               {/* Steam effect */}
               <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
@@ -121,9 +121,9 @@ export default function CafeHero() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -top-4 -right-4 bg-white rounded-full p-6 shadow-xl animate-bounce">
+            <div className="absolute -top-4 -right-4 bg-white rounded-full p-6 shadow-xl animate-float">
               <div className="text-center">
-                <p className="text-3xl font-bold text-amber-900">★ 4.9</p>
+                <p className="text-3xl font-bold text-amber-900 animate-pulse">★ 4.9</p>
                 <p className="text-xs text-amber-700 font-medium">Rating</p>
               </div>
             </div>
