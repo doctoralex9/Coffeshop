@@ -1,6 +1,7 @@
 "use client"; 
 
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@heroui/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@heroui/react";
+import Link from "next/link";
 
 export const AcmeLogo = () => {
   return (
@@ -24,7 +25,7 @@ export default function Nav() {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/menu">
             Menu
           </Link>
         </NavbarItem>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Coffee, Clock, MapPin } from 'lucide-react';
 
 export default function CafeHero() {
@@ -54,10 +55,10 @@ export default function CafeHero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up">
-            <button className="group px-8 py-4 bg-amber-900 text-white rounded-full font-semibold text-lg hover:bg-amber-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-bounce-subtle">
+            <Link href="/menu" className="group px-8 py-4 bg-amber-900 text-white rounded-full font-semibold text-lg hover:bg-amber-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-bounce-subtle text-center">
               View Menu
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
-            </button>
+            </Link>
             <button className="px-8 py-4 bg-white text-amber-900 rounded-full font-semibold text-lg hover:bg-amber-50 transition-all duration-300 border-2 border-amber-900 hover:scale-105">
               Visit Us
             </button>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import wondersImages from "../photo-feed/photos";
 import "./styles.css";
 import { Coffee, Snowflake } from 'lucide-react';
@@ -42,10 +43,10 @@ export default function MenuPreview() {
             <p className="menu-hero-description">
               Explore our selection of freshly brewed hot coffees, from bold espressos to smooth lattes
             </p>
-            <button className="menu-cta-btn">
+            <Link href="/menu" className="menu-cta-btn">
               View Menu
               <span className="menu-cta-arrow">→</span>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -70,10 +71,10 @@ export default function MenuPreview() {
             <p className="menu-hero-description">
               Refresh yourself with our signature cold brews and iced specialties
             </p>
-            <button className="menu-cta-btn">
+            <Link href="/menu" className="menu-cta-btn">
               View Menu
               <span className="menu-cta-arrow">→</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
