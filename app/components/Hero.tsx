@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Coffee, Clock, MapPin } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
+import BackgroundCarousel from './BackgroundCarousel';
 
 export default function CafeHero() {
   const [scrollY, setScrollY] = useState(0);
@@ -19,6 +20,13 @@ export default function CafeHero() {
     '/photo-feed/photos/7.jpg',
   ];
 
+  // Background images for homepage (8, 9, 11)
+  const backgroundImages = [
+    '/photo-feed/photos/8.jpg',
+    '/photo-feed/photos/9.jpg',
+    '/photo-feed/photos/11.jpg',
+  ];
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -26,7 +34,18 @@ export default function CafeHero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 animate-fade-in">
+    <div className="relative min-h-screen overflow-hidden animate-fade-in">
+      {/* Animated Background Carousel */}
+      <BackgroundCarousel
+        images={backgroundImages}
+        interval={5000}
+        transitionDuration={1500}
+        overlay={true}
+        overlayColor="black"
+        overlayOpacity={0.4}
+        priority={true}
+      />
+
       {/* Floating coffee beans decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(6)].map((_, i) => (
@@ -47,13 +66,7 @@ export default function CafeHero() {
       <div className="relative max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center min-h-screen">
         {/* Left content */}
         <div className="lg:w-1/2 z-10 space-y-8 text-center lg:text-left">
-          <div className="inline-block">
-            <span className="px-4 py-2 bg-amber-900 text-amber-50 rounded-full text-sm font-medium tracking-wide">
-              ☕ Coffe Spot
-            </span>
-          </div>
-          
-          <h1 className="text-6xl lg:text-7xl font-bold text-amber-950 leading-tight animate-slide-in-left">
+          <h1 className="text-6xl lg:text-7xl font-bold text-white leading-tight animate-slide-in-left drop-shadow-2xl">
             Where Every
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 animate-text-shimmer">
               Sip Tells
@@ -61,7 +74,7 @@ export default function CafeHero() {
             a Story
           </h1>
           
-          <p className="text-xl text-amber-800 max-w-lg mx-auto lg:mx-0">
+          <p className="text-xl text-white/90 max-w-lg mx-auto lg:mx-0 drop-shadow-lg">
             Handcrafted beverages, freshly baked goods, and a cozy atmosphere that feels like home. Start your day with us.
           </p>
 
@@ -79,24 +92,24 @@ export default function CafeHero() {
           {/* Info cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8">
             <div className="flex items-center gap-3 justify-center lg:justify-start">
-              <Clock className="w-5 h-5 text-amber-700" />
+              <Clock className="w-5 h-5 text-white/90 drop-shadow-lg" />
               <div className="text-left">
-                <p className="text-xs text-amber-600 font-medium">OPEN DAILY</p>
-                <p className="text-sm text-amber-900 font-semibold">7AM - 8PM</p>
+                <p className="text-xs text-white/70 font-medium drop-shadow">OPEN DAILY</p>
+                <p className="text-sm text-white/95 font-semibold drop-shadow-lg">7AM - 8PM</p>
               </div>
             </div>
             <div className="flex items-center gap-3 justify-center lg:justify-start">
-              <MapPin className="w-5 h-5 text-amber-700" />
+              <MapPin className="w-5 h-5 text-white/90 drop-shadow-lg" />
               <div className="text-left">
-                <p className="text-xs text-amber-600 font-medium">LOCATION</p>
-                <p className="text-sm text-amber-900 font-semibold">Downtown</p>
+                <p className="text-xs text-white/70 font-medium drop-shadow">LOCATION</p>
+                <p className="text-sm text-white/95 font-semibold drop-shadow-lg">Downtown</p>
               </div>
             </div>
             <div className="flex items-center gap-3 justify-center lg:justify-start">
-              <Coffee className="w-5 h-5 text-amber-700" />
+              <Coffee className="w-5 h-5 text-white/90 drop-shadow-lg" />
               <div className="text-left">
-                <p className="text-xs text-amber-600 font-medium">SPECIALTY</p>
-                <p className="text-sm text-amber-900 font-semibold">Cold Brew</p>
+                <p className="text-xs text-white/70 font-medium drop-shadow">SPECIALTY</p>
+                <p className="text-sm text-white/95 font-semibold drop-shadow-lg">Cold Brew</p>
               </div>
             </div>
           </div>
