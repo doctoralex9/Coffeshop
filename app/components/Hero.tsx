@@ -3,9 +3,21 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Coffee, Clock, MapPin } from 'lucide-react';
+import ImageCarousel from './ImageCarousel';
 
 export default function CafeHero() {
   const [scrollY, setScrollY] = useState(0);
+
+  // Image paths from photo-feed
+  const carouselImages = [
+    '/photo-feed/photos/1.png',
+    '/photo-feed/photos/2.png',
+    '/photo-feed/photos/3.png',
+    '/photo-feed/photos/4.png',
+    '/photo-feed/photos/5.png',
+    '/photo-feed/photos/6.jpg',
+    '/photo-feed/photos/7.jpg',
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -96,41 +108,19 @@ export default function CafeHero() {
             className="relative transform transition-transform duration-300"
             style={{ transform: `translateY(${scrollY * 0.1}px)` }}
           >
-            {/* Main coffee cup image placeholder with gradient */}
-            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl animate-scale-in">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-500 to-amber-700 flex items-center justify-center">
-                <Coffee className="w-48 h-48 text-white opacity-20 animate-rotate-slow" />
-              </div>
+            {/* Main Image Carousel */}
+            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl animate-scale-in ring-4 ring-white/50">
+              <ImageCarousel
+                images={carouselImages}
+                interval={4000}
+                imageClassName="rounded-3xl"
+                transitionDuration={1000}
+                showIndicators={true}
+              />
 
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              
-              {/* Steam effect */}
-              <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
-                {[...Array(3)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-2 h-16 bg-white opacity-20 rounded-full animate-pulse"
-                    style={{
-                      left: `${i * 20}px`,
-                      animationDelay: `${i * 0.3}s`,
-                      animationDuration: '2s'
-                    }}
-                  />
-                ))}
-              </div>
+              {/* Subtle overlay gradient for better text contrast if needed */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
             </div>
-
-            {/* Floating badge */}
-            <div className="absolute -top-4 -right-4 bg-white rounded-full p-6 shadow-xl animate-float">
-              <div className="text-center">
-                <p className="text-3xl font-bold text-amber-900 animate-pulse">★ 4.9</p>
-                <p className="text-xs text-amber-700 font-medium">Rating</p>
-              </div>
-            </div>
-
-            {/* Decorative element */}
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-amber-200 rounded-full opacity-50 blur-2xl" />
           </div>
         </div>
       </div>
