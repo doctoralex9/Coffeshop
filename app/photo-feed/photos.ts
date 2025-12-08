@@ -6,6 +6,14 @@ import photo4 from "./photos/4.png";
 import photo5 from "./photos/5.png";
 import photo6 from "./photos/6.jpg";
 import photo7 from "./photos/7.jpg";
+import photo10 from "./photos/10.jpg";
+import photo13 from "./photos/13.jpg";
+import photo14 from "./photos/14.jpg";
+import photo15 from "./photos/15.jpg";
+import photo16 from "./photos/16.jpg";
+import photo17 from "./photos/17.jpg";
+import photo18 from "./photos/18.jpg";
+import photo19 from "./photos/19.jpg";
 
 export type WonderImage = {
   id: string;
@@ -55,6 +63,54 @@ const wondersImages: WonderImage[] = [
     id: "7",
     name: "Mocha",
     src: photo7,
+  },
+
+  {
+    id: "10",
+    name: "About Coffee Spot",
+    src: photo10,
+  },
+
+  {
+    id: "13",
+    name: "Menu Preview",
+    src: photo13,
+  },
+
+  {
+    id: "14",
+    name: "Avocado Toast with Poached Egg",
+    src: photo14,
+  },
+
+  {
+    id: "15",
+    name: "Blueberry & Banana French Toast",
+    src: photo15,
+  },
+
+  {
+    id: "16",
+    name: "Iced Caramel Macchiato",
+    src: photo16,
+  },
+
+  {
+    id: "17",
+    name: "Vanilla Iced Coffee",
+    src: photo17,
+  },
+
+  {
+    id: "18",
+    name: "Iced Mocha",
+    src: photo18,
+  },
+
+  {
+    id: "19",
+    name: "Frappuccino",
+    src: photo19,
   },
 ];
 

@@ -21,7 +21,11 @@ export default function Nav() {
     <Navbar isBordered>
       <NavbarBrand>
         <AcmeLogo />
-        <p className="font-bold text-inherit">Coffe Spot</p>
+        <p className="font-bold text-inherit">
+          <Link href="/">
+          Coffe Spot
+          </Link>
+        </p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
@@ -30,7 +34,7 @@ export default function Nav() {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link aria-current="page" href="#">
+          <Link aria-current="page" href="about_the_place">
            About the place
           </Link>
         </NavbarItem>

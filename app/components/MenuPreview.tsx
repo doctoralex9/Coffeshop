@@ -26,8 +26,8 @@ export default function MenuPreview() {
         <div className="menu-hero-card animate-slide-in-left">
           <div className="menu-hero-image-wrapper">
             <Image
-              src={wondersImages[3].src}
-              alt={wondersImages[3].name}
+              src={wondersImages[1].src}
+              alt={wondersImages[1].name}
               className="menu-hero-image"
               placeholder="blur"
             />
