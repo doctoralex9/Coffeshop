@@ -6,6 +6,14 @@ import { Coffee, Clock, MapPin } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
 import BackgroundCarousel from './BackgroundCarousel';
 
+// Horizontal programming: Reusable scroll function
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
 export default function CafeHero() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -84,7 +92,10 @@ export default function CafeHero() {
               View Menu
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Link>
-            <button className="px-8 py-4 bg-white text-amber-900 rounded-full font-semibold text-lg hover:bg-amber-50 transition-all duration-300 border-2 border-amber-900 hover:scale-105">
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-4 bg-white text-amber-900 rounded-full font-semibold text-lg hover:bg-amber-50 transition-all duration-300 border-2 border-amber-900 hover:scale-105"
+            >
               Visit Us
             </button>
           </div>

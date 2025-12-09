@@ -17,6 +17,7 @@ export default function Menu() {
                 { name: "Classic Cappuccino", price: "$4.50", image: wondersImages[0] },
                 { name: "Traditional Greek", price: "$3.80", image: wondersImages[1] },
                 { name: "Mocha", price: "$5.00", image: wondersImages[6] },
+                { name: "Classic Espresso", price: "€2.20", image: wondersImages[15], description: "A rich, aromatic espresso crafted from freshly roasted beans for a bold, smooth flavor. Perfect for a quick boost or the start of your favorite coffee drink." },
             ]
         },
         {

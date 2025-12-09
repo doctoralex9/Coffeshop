@@ -1,7 +1,15 @@
-"use client"; 
+"use client";
 
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Button} from "@heroui/react";
 import Link from "next/link";
+
+// Horizontal programming: Reusable scroll function
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 export const AcmeLogo = () => {
   return (
@@ -39,14 +47,21 @@ export default function Nav() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-             About Us
-          </Link>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="text-foreground cursor-pointer hover:opacity-80 transition-opacity"
+          >
+            About Us
+          </button>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button
+            color="primary"
+            variant="flat"
+            onClick={() => scrollToSection('contact')}
+          >
             Contact
           </Button>
         </NavbarItem>

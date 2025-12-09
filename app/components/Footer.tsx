@@ -1,8 +1,9 @@
 export default function Footer() {
   return (
-    <footer 
+    <footer
+      id="contact"
       className="section text-center border-t"
-      style={{ 
+      style={{
         backgroundColor: 'var(--card-bg)',
         borderColor: 'var(--muted)'
       }}
@@ -13,33 +14,35 @@ export default function Footer() {
           {/* About Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--accent)' }}>
-              About Us
+              About Coffee Spot
             </h3>
             <p style={{ color: 'var(--muted)' }}>
-              Your favorite café serving the finest coffee and delicious treats since 2024.
+              Your cozy neighborhood escape in the heart of the community. We serve handcrafted beverages, fresh pastries, and create a welcoming space where everyone feels at home.
             </p>
           </div>
 
           {/* Hours Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--accent)' }}>
-              Hours
+              Opening Hours
             </h3>
             <p style={{ color: 'var(--muted)' }}>
-              Monday - Friday: 7am - 8pm<br />
-              Saturday - Sunday: 8am - 9pm
+              Monday - Friday: 7:00 AM - 8:00 PM<br />
+              Saturday - Sunday: 8:00 AM - 9:00 PM<br />
+              <span className="text-sm">Open Daily</span>
             </p>
           </div>
 
           {/* Contact Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--accent)' }}>
-              Contact
+              Visit & Contact Us
             </h3>
             <p style={{ color: 'var(--muted)' }}>
+              Downtown Location<br />
               123 Coffee Street<br />
               Phone: (555) 123-4567<br />
-              info@cafe.com
+              Email: info@coffeespot.com
             </p>
           </div>
         </div>
@@ -47,7 +50,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="pt-6 border-t" style={{ borderColor: 'var(--muted)' }}>
           <p style={{ color: 'var(--muted)' }}>
-            © 2024 Café. All rights reserved.
+            © 2024 Coffee Spot. All rights reserved.
           </p>
         </div>
       </div>

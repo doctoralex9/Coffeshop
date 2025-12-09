@@ -14,6 +14,7 @@ import photo16 from "./photos/16.jpg";
 import photo17 from "./photos/17.jpg";
 import photo18 from "./photos/18.jpg";
 import photo19 from "./photos/19.jpg";
+import photo20 from "./photos/20.jpg";
 
 export type WonderImage = {
   id: string;
@@ -111,6 +112,12 @@ const wondersImages: WonderImage[] = [
     id: "19",
     name: "Frappuccino",
     src: photo19,
+  },
+
+  {
+    id: "20",
+    name: "Classic Espresso",
+    src: photo20,
   },
 ];
 
