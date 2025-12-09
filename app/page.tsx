@@ -24,7 +24,7 @@ export default function HomePage() {
   return(
     <>
       <Hero />
-      <MenuPreview coldCoffees={[]} hotCoffees={[]} />
+      <MenuPreview />
       <Footer />
     </>
   );
