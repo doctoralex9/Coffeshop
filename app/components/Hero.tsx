@@ -2,19 +2,28 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import { Coffee, Clock, MapPin } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
 import BackgroundCarousel from './BackgroundCarousel';
 
-// Horizontal programming: Reusable scroll function
-const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Horizontal programming: Smart navigation function
+const navigateToSection = (sectionId: string, pathname: string, router: any) => {
+  if (pathname === '/') {
+    // Already on homepage, just scroll
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  } else {
+    // Navigate to homepage with hash
+    router.push(`/#${sectionId}`);
   }
 };
 
 export default function CafeHero() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [scrollY, setScrollY] = useState(0);
 
   // Image paths from photo-feed
@@ -93,7 +102,7 @@ export default function CafeHero() {
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => navigateToSection('contact', pathname, router)}
               className="px-8 py-4 bg-white text-amber-900 rounded-full font-semibold text-lg hover:bg-amber-50 transition-all duration-300 border-2 border-amber-900 hover:scale-105"
             >
               Visit Us
