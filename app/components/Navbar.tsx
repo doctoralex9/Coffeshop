@@ -68,7 +68,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 bg-amber-950/10 backdrop-blur-md transition-transform duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 bg-amber-600/5 backdrop-blur-md transition-transform duration-300 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -133,7 +133,7 @@ export default function Navbar() {
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-4 pt-2 pb-4 space-y-3 bg-amber-950/20 backdrop-blur-md border-t border-amber-600/20">
+        <div className="px-4 pt-2 pb-4 space-y-3 bg-amber-600/10 backdrop-blur-md border-t border-amber-600/20">
           <Link
             href="/menu"
             onClick={() => setIsMobileMenuOpen(false)}
