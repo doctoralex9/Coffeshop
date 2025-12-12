@@ -44,6 +44,16 @@ export default function CafeHero() {
     '/photo-feed/photos/11.jpg',
   ];
 
+  // Horizontal programming: Predefined positions for decorative elements (fixes hydration)
+  const decorativePositions = [
+    { left: '10%', top: '20%' },
+    { left: '85%', top: '15%' },
+    { left: '15%', top: '70%' },
+    { left: '75%', top: '65%' },
+    { left: '45%', top: '30%' },
+    { left: '60%', top: '80%' },
+  ];
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
@@ -65,13 +75,13 @@ export default function CafeHero() {
 
       {/* Floating coffee beans decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => (
+        {decorativePositions.map((position, i) => (
           <div
             key={i}
             className="absolute w-8 h-8 bg-amber-800 rounded-full opacity-10 animate-pulse"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: position.left,
+              top: position.top,
               animationDelay: `${i * 4}s`,
               animationDuration: `${3 + i}s`
             }}
